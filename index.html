@@ -7,16 +7,18 @@
   <meta name="title" content="">
   <meta name="keywords" content="">
 
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
   <title>Wardimatic Pictures</title>
-  
+
   <link rel="stylesheet" href="css/ionicons.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="wrapper">
-    <img src="img/logo.jpg" alt="Wardimatic Pictures Logo" class="animated fadeInDown">
+  <div id="wrapper" class="Absolute-Center">
+    <img src="img/logo.png" alt="Wardimatic Pictures Logo" class="animated fadeInDown">
     <p class="animated fadeIn">Sorry for the inconvenience guys & gals!! Our website is currently under construction. In the meantime check out some of our visuals through our youtube channel. Thank you for your patience!! :)</p>
+
     <footer class="animated fadeInUp">
       <a href="https://www.facebook.com/mjwardFilm" target="_blank" class="ion-social-facebook-outline"></a>
       <a href="https://www.youtube.com/user/mjward305" target="_blank" class="ion-social-youtube-outline"></a>
@@ -24,5 +26,14 @@
       <a href="https://twitter.com/wardimaticpics" target="_blank" class="ion-social-twitter-outline"></a>
     </footer>
   </div>
+
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/center.module.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('#wrapper').center();
+    });
+  </script>
 </body>
 </html>

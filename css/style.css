@@ -9,7 +9,6 @@
 
 /* General Styles */
 #wrapper {
-  margin: 0 auto;
   max-width: 640px;
 }
 
@@ -35,7 +34,7 @@ footer {
 a {
   color: #000000;
   font-size: 36px;
-  margin: 0 30px;
+  margin: 0 25px;
 }
 
 a:hover {
