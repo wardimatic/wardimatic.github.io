@@ -19,7 +19,6 @@ p {
   margin-bottom: 20px;
   padding: 30px;
   text-align: justify;
-
 }
 
 img {
@@ -47,5 +46,9 @@ a:hover {
     color: #fe635f;
     font-size: 28px;
     margin: 0 15px;
+  }
+
+  p {
+    padding: 20px 30px;
   }
 }
