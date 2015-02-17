@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/ionicons.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fresco.css">
 </head>
 <body>
   <div id="wrapper" class="Absolute-Center">
@@ -30,10 +31,23 @@
 
   <script src="js/modernizr.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/fresco.js"></script>
   <script src="js/center.module.js"></script>
   <script type="text/javascript">
     $(function() {
       $('#wrapper').center();
+
+      setTimeout(function(){
+        console.log(Fresco);
+        Fresco.show({
+          url: 'https://www.youtube.com/watch?v=wdstavIV5PI',
+          options: {
+            width: 853,
+            height: 480,
+            youtube: { autoplay: 1 }
+          }
+        });
+      }, 3000);
     });
   </script>
 </body>
