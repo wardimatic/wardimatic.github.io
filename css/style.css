@@ -10,6 +10,7 @@
 /* General Styles */
 #wrapper {
   max-width: 640px;
+  visibility: none;
 }
 
 p {
