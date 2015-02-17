@@ -19,7 +19,7 @@
 <body>
   <div id="wrapper" class="Absolute-Center">
     <img src="img/logo.png" alt="Wardimatic Pictures Logo" class="animated fadeInDown">
-    <p class="animated fadeIn">Sorry for the inconvenience guys & gals!! Our website is currently under construction. In the meantime check out some of our visuals through our youtube channel. Thank you for your patience!! :)</p>
+    <p class="animated fadeIn">Sorry for the inconvenience guys & gals!! Our website is currently under construction. In the meantime check out some of our visuals through our youtube channel. Thank you for your patience!! :) <span id="play"></span></p>
 
     <footer class="animated fadeInUp">
       <a href="https://www.facebook.com/mjwardFilm" target="_blank" class="ion-social-facebook-outline"></a>
@@ -37,17 +37,28 @@
     $(function() {
       $('#wrapper').center();
 
-      setTimeout(function(){
-        console.log(Fresco);
+      function showVideo() {
         Fresco.show({
           url: 'https://www.youtube.com/watch?v=wdstavIV5PI',
           options: {
             width: 853,
             height: 480,
-            youtube: { autoplay: 1 }
+            youtube: { autoplay: 1 },
+            afterHide: function() {
+              $('#play').empty();
+              $('#play').append("Replay Video &#9654;");
+            }
           }
         });
+      }
+
+      setTimeout(function(){
+        showVideo();
       }, 3500);
+
+      $('#play').click(function(){
+        showVideo();
+      });
     });
   </script>
 </body>

@@ -40,6 +40,11 @@ a:hover {
   color: #fe635f;
 }
 
+#play {
+  color: #fe635f;
+  cursor: pointer;
+  font-weight: bold;
+}
 
 @media only screen and (max-width: 40em) {
   a {
