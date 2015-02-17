@@ -38,10 +38,11 @@
     $(function() {
       $('#wrapper').center().show();
 
+      var video_link = " ";
 
-      function showVideo() {
+      function showVideo(yt_url) {
         Fresco.show({
-          url: 'https://www.youtube.com/watch?v=wdstavIV5PI',
+          url: yt_url,
           options: {
             width: 853,
             height: 480,
@@ -54,12 +55,19 @@
         });
       }
 
-      setTimeout(function(){
-        showVideo();
-      }, 3500);
+      $.getJSON("https://spreadsheets.google.com/feeds/list/1X4TKjN0ra4DqBwf3aMK--sA-t9JgtVEZSuzNKlXp7OY/od6/public/values?alt=json",
+        function(data) {
+          video_link = data.feed.entry[0].gsx$youtubeurl.$t;
+
+          if(video_link != " "){
+            setTimeout(function(){
+              showVideo(video_link);
+            }, 3500);
+          }
+        });
 
       $('#play').click(function(){
-        showVideo();
+        showVideo(video_link);
       });
     });
   </script>
